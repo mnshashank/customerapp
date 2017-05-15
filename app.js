@@ -13,9 +13,10 @@ var app = express();
 //
 // app.use(logger);
 
+//view engine
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 // body parser middleware
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
 
@@ -41,7 +42,10 @@ var person = [
   }];
 
 app.get('/',function(req,res){
-  res.json(person);
+  res.render("index",{
+    title: "customers",
+    users: person
+  });
 });
 
 
