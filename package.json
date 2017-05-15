@@ -1,0 +1,23 @@
+{
+  "name": "customerapp",
+  "version": "1.0.0",
+  "description": "a customer management application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnshashank/customerapp.git"
+  },
+  "author": "shashank m n",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnshashank/customerapp/issues"
+  },
+  "homepage": "https://github.com/mnshashank/customerapp#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
