@@ -1,9 +1,27 @@
 <% include partials/header %>
-Hello From <%= title%>
+<div>Hello From <%= title%> </div>
 
-   <ul>
-    <% users.forEach(function(user) { %>
-      <li> <%= user.age %></li>
-    <% }) %>
-    <ul>
+<h2> Add customer</h2>
+<% if (errors) { %>
+  <% errors.forEach(function(error) { %>
+  <div> <%= error.msg %></div>
+  <% }) %>
+<% } %>
+<form method="post" action="/users/add">
+  <label>Name </label>
+  <br>
+  <input type="text" name="name">
+  <br>
+  <label>Age</label>
+  <br>
+  <input type="number" name="age">
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+<ul>
+<% users.forEach(function(user) { %>
+<li> <%= user.age %></li>
+<% }) %>
+<ul>
 <% include partials/footer %>
