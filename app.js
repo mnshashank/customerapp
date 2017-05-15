@@ -14,14 +14,34 @@ var app = express();
 // app.use(logger);
 
 // body parser middleware
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
 
 // set static path
 app.use(express.static(path.join(__dirname, "public")));
 
+var person = [
+  {
+    name: "shashank",
+    age: 23
+  },
+  {
+    name: "shashank",
+    age: 23
+  },
+  {
+    name: "shashank",
+    age: 23
+  },
+  {
+    name: "shashank",
+    age: 23
+  }];
+
 app.get('/',function(req,res){
-  res.send("hello people!!");
+  res.json(person);
 });
 
 
